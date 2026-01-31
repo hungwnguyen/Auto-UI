@@ -35,64 +35,177 @@
 
   <style>
     :root {
-      --base-font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
-      --base-line-height: 1.4;
-      --base-font-size: 18px;
+      /* ===== Base ===== */
+      --base-font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Helvetica, Arial, sans-serif;
+      --base-line-height: 1.6;
+      --base-font-size: 16px;
 
-      --cover-max-width: 45em;
-      --content-max-width: 910px;
+      --cover-max-width: 48em;
+      --content-max-width: 920px;
 
-      --heading-h2-border-style: none;
-      --heading-h1-margin: 1rem 0rem -0.5rem 0rem;
-      --heading-h2-margin: 1rem 0rem -1.5rem 0rem;
-      --heading-h3-margin: 1rem 0rem -.5rem 0rem;
-      --heading-h4-margin: 1rem 0rem -.5rem 0rem;
-      --heading-h5-margin: 1rem 0rem -.5rem 0rem;
-      --heading-h6-margin: 1rem 0rem 0rem 0rem;
-      --heading-h1-font-size: 1.60rem;
-      --heading-h2-font-size: 1.40rem;
-      --heading-h3-font-size: 1.20rem;
-      --heading-h4-font-size: 1.15rem;
-      --heading-h5-font-size: 1.1rem;
-      --heading-h6-font-size: 1rem;
-      --heading-h1-font-weight: 400;
-      --heading-h2-font-weight: 400;
-      --heading-h3-font-weight: 400;
-      --heading-h4-font-weight: 400;
-      --heading-h5-font-weight: 400;
-      --heading-h6-font-weight: 400;
+      /* ===== Dark Mode Colors (Deep Slate) ===== */
+      --base-background-color: #0f172a;
+      --base-color: #cbd5e1;
+      /* Text color mượt hơn */
+      --heading-color: #f8fafc;
+      --muted-color: #94a3b8;
 
-      --link-color: #0374B5;
-      --link-text-decoration: underline;
+      /* ===== Headings ===== */
+      --heading-h1-font-size: 1.6rem;
+      --heading-h2-font-size: 1.35rem;
+      --heading-h1-font-weight: 600;
+
+      /* ===== Links ===== */
+      --link-color: #22c55e;
+      --link-text-decoration: none;
       --link-text-decoration--hover: underline;
 
-      --sidebar-background: #FCFCFC;
-      --sidebar-border-color: #F0F0F0;
-      --sidebar-toggle-background: #F0F0F0;
-      --sidebar-name-color: #0374B5;
-      --sidebar-name-font-weight: 600;
-      --sidebar-nav-link-color--active: #0374B5;
-      --sidebar-nav-link-border-color--active: #0374B5;
-      --sidebar-nav-link-font-weight--active: bold;
+      /* ===== Sidebar & Navbar ===== */
+      --sidebar-background: #020617;
+      --sidebar-border-color: #1e293b;
+      --sidebar-name-color: #22c55e;
+      --sidebar-nav-link-color: #94a3b8;
+      --sidebar-nav-link-color--active: #22c55e;
 
-      --sidebar-nav-pagelink-background--active:
-        no-repeat 0px center / 5px 6px linear-gradient(225deg, transparent 2.75px, #0374B5 2.75px 4.25px, transparent 4.25px),
-        no-repeat 5px center / 5px 6px linear-gradient(135deg, transparent 2.75px, #0374B5 2.75px 4.25px, transparent 4.25px);
-      --sidebar-nav-pagelink-background--collapse:
-        no-repeat 2px calc(50% - 2.5px) / 6px 5px linear-gradient(45deg, transparent 2.75px, #0374B5 2.75px 4.25px, transparent 4px),
-        no-repeat 2px calc(50% + 2.5px) / 6px 5px linear-gradient(135deg, transparent 2.75px, #0374B5 2.75px 4.25px, transparent 4px);
-      --sidebar-nav-pagelink-background--loaded:
-        no-repeat 0px center / 5px 6px linear-gradient(225deg, transparent 2.75px, #0374B5 2.75px 4.25px, transparent 4.25px),
-        no-repeat 5px center / 5px 6px linear-gradient(135deg, transparent 2.75px, #0374B5 2.75px 4.25px, transparent 4.25px);
+      /* ===== Search Plugin Fix ===== */
+      --search-background: #020617;
+      --search-input-color: #f8fafc;
+      --search-input-placeholder-color: #64748b;
+      --search-result-heading-color: #22c55e;
+      --search-result-keyword-background: rgba(34, 197, 94, 0.2);
 
-      --navbar-root-margin: 0 0 0 .8em;
-      --navbar-root-color--active: #0374B5;
+      /* ===== Blockquote & Tabs ===== */
+      --blockquote-border-color: #22c55e;
+      --blockquote-background: rgba(34, 197, 94, 0.08);
+      --docsifytabs-tab-background: #1e293b;
+      --docsifytabs-tab-color: #94a3b8;
+      --docsifytabs-tab-color--active: #22c55e;
+    }
 
-      --blockquote-border-color: #0374B5;
+    /* ===== DARK MODE OVERRIDES ===== */
+    body {
+      background-color: var(--base-background-color);
+      color: var(--base-color);
+    }
 
-      --pagination-title-color: #0374B5;
+    /* --- Fix Description & General Text --- */
+    .markdown-section {
+      color: var(--base-color);
+    }
 
-      --docsifytabs-tab-color: var(--base-color);
+    .markdown-section strong {
+      color: #f8fafc;
+    }
+
+    /* --- Search Plugin --- */
+    .search input {
+      background: var(--search-background) !important;
+      color: var(--search-input-color) !important;
+      border: 1px solid var(--sidebar-border-color) !important;
+    }
+
+    .search .search-keyword {
+      color: #22c55e !important;
+      font-style: normal;
+    }
+
+    .search .clear-icon {
+      background-color: transparent !important;
+    }
+
+    .search p.empty,
+    .search .matching-post {
+      color: var(--base-color) !important;
+      background: var(--sidebar-background) !important;
+      border-bottom: 1px solid var(--sidebar-border-color) !important;
+    }
+
+    /* --- Download Button --- */
+    .download-container {
+      margin-bottom: 2rem;
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    .download-btn {
+      background-color: #22c55e !important;
+      color: #ffffff !important;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none !important;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.3s ease;
+      border: none;
+    }
+
+    .download-btn:hover {
+      background-color: #16a34a !important;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+    }
+
+    /* --- Table Fix (For Package Includes) --- */
+    .markdown-section table {
+      display: table;
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 1.5rem;
+      background-color: #0f172a !important;
+      color: var(--base-color) !important;
+    }
+
+    .markdown-section table tr {
+      border-top: 1px solid #1e293b;
+      background-color: #0f172a !important;
+    }
+
+    .markdown-section table tr:nth-child(2n) {
+      background-color: #1e293b !important;
+    }
+
+    .markdown-section table th,
+    .markdown-section table td {
+      padding: 12px 15px;
+      border: 1px solid #334155;
+      color: var(--base-color) !important;
+    }
+
+    .markdown-section table th {
+      background-color: #1e293b !important;
+      color: #22c55e !important;
+      font-weight: 700;
+    }
+
+    /* --- Code Blocks --- */
+    code,
+    pre {
+      background-color: #020617 !important;
+      color: #e5e7eb !important;
+      border-radius: 6px;
+    }
+
+    pre {
+      border: 1px solid #1e293b !important;
+    }
+
+    /* --- Sidebar --- */
+    .sidebar {
+      background-color: var(--sidebar-background) !important;
+      color: var(--base-color);
+      border-right: 1px solid var(--sidebar-border-color);
+    }
+
+    .sidebar-nav li a {
+      color: var(--sidebar-nav-link-color);
+    }
+
+    .sidebar-nav li.active>a {
+      color: var(--sidebar-nav-link-color--active) !important;
+      font-weight: bold;
     }
   </style>
 
@@ -102,10 +215,10 @@
   <div id="app"></div>
   <script>
     // Enter the URL of your own GitHub Repository in between the two quotes below
-    var gitLinkRepoURL = 'https://hungwnguyen.github.io/Auto-UI';
+    var gitLinkRepoURL = 'https://github.com/hungwnguyen/Auto-UI';
 
     // Customize the text for your Edit this Page on GitHub link between the two quotes below
-    var editThisPageLinkText = 'Edit this Page';
+    var editThisPageLinkText = 'View on Asset Store';
 
     // Set standalone to true to permanently hide the Sidebar and Navbar
     var standalone = false;
@@ -161,12 +274,12 @@
     window.$docsify = {
       // GENERAL SETTINGS
       // -----------------------------------------------------------------
-      name: 'Docsify Open Publishing Starter Kit',
+      name: 'Auto UI Generator',
       // repo           : 'https://github.com/hibbitts-design/docsify-open-publishing-starter-kit/',
       homepage: 'home.md',
       // coverpage      : '_coverpage.md',
       loadSidebar: !(getURLParameterByName(['standalone', 'embedded']) || standalone || false),
-      loadNavbar: !(getURLParameterByName(['standalone', 'embedded']) && !(getURLParameterByName('navbar')) || standalone && !navbar || false),
+
       mergeNavbar: false,
       externalLinkTarget: standalone ? '_top' : (getURLParameterByName(['standalone', 'embedded'], '_top', '_blank')),
       loadFooter: (getURLParameterByName('footer') || footer || false),
@@ -301,21 +414,19 @@
           });
 
           hook.beforeEach(function (html) {
-            if (/githubusercontent\.com/.test(vm.route.file)) {
-              url = vm.route.file
-                .replace('raw.githubusercontent.com', 'github.com')
-                .replace(/\/master/, '/blob/master')
-            } else {
-              url = gitLinkRepoURL + '/blob/main/docs/' + vm.route.file
-            }
-            var editHtml = '[:memo:' + editThisPageLinkText + '](' + url + ' ":class=align-items-vertically")\n'
+            // Đường dẫn Asset Store của bạn
+            var assetStoreURL = 'https://assetstore.unity.com/your-product-link';
 
-            if ((!(getURLParameterByName('hidegitlink'))) && (!!gitLinkRepoURL)) {
-              return editHtml + '\n' + html
-            } else {
-              return html
-            }
+            var editHtml = '<div class="download-container">' +
+              '<a href="' + assetStoreURL + '" target="_blank" class="download-btn">' +
+              '<i class="fa-solid fa-cart-shopping"></i> ' + editThisPageLinkText +
+              '</a></div>\n';
 
+            if ((!(getURLParameterByName('hidegitlink'))) && (!!editThisPageLinkText)) {
+              return editHtml + '\n' + html;
+            } else {
+              return html;
+            }
           });
 
           // Invoked on each page load after new HTML has been appended to the DOM
@@ -418,10 +529,10 @@
                   if (targetElement) {
                     // Calculate the scroll position with topMargin offset
                     let scrollTop = targetElement.offsetTop - topMargin;
-                    
+
                     // Ensure we don't scroll above the top of the page
                     scrollTop = Math.max(0, scrollTop);
-                    
+
                     // Scroll smoothly to the element's top position minus topMargin
                     window.scrollTo({
                       top: scrollTop,
