@@ -207,6 +207,89 @@
       color: var(--sidebar-nav-link-color--active) !important;
       font-weight: bold;
     }
+
+    /* ===== Search Box Container ===== */
+    .sidebar .search {
+      padding: 20px 16px 10px;
+      background-color: transparent !important;
+      border-bottom: 1px solid var(--sidebar-border-color);
+    }
+
+    /* ===== Input Wrap (Luna-style) ===== */
+    .search .input-wrap {
+      position: relative;
+      display: flex;
+      align-items: center;
+      background: #0f172a !important;
+      /* Màu nền nhẹ hơn sidebar một chút để tạo khối */
+      border: 1px solid #334155;
+      /* Border sáng hơn để thấy rõ viền */
+      border-radius: 10px;
+      padding: 8px 12px 8px 38px;
+      transition: all 0.2s ease-in-out;
+    }
+
+    /* Hiệu ứng khi click vào ô tìm kiếm */
+    .search .input-wrap:focus-within {
+      border-color: #22c55e;
+      /* Màu xanh lá đặc trưng của bạn */
+      box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.15);
+      background: #020617 !important;
+      /* Đổi nền tối sâu hơn khi focus */
+    }
+
+    /* ===== Icon Tìm Kiếm (FontAwesome) ===== */
+    .search .input-wrap::before {
+      content: "\f002";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      position: absolute;
+      left: 14px;
+      color: #64748b;
+      /* Màu slate mờ */
+      font-size: 13px;
+      transition: color 0.2s;
+    }
+
+    .search .input-wrap:focus-within::before {
+      color: #22c55e;
+      /* Icon sáng lên khi focus */
+    }
+
+    /* ===== Ô Input thực tế ===== */
+    .search input[type="search"] {
+      background: transparent !important;
+      border: none !important;
+      outline: none !important;
+      width: 100%;
+      color: #f8fafc;
+      font-size: 14px;
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+
+    .search input[type="search"]::placeholder {
+      color: #64748b;
+      opacity: 1;
+    }
+
+    /* ===== Phím tắt KBD (Luna-style) ===== */
+    .search kbd {
+      display: inline-block;
+      margin-left: 8px;
+      padding: 2px 5px;
+      font-size: 10px;
+      font-weight: 600;
+      color: #94a3b8;
+      background: #1e293b;
+      /* Nền phím tắt nổi bật trên nền tối */
+      border: 1px solid #334155;
+      border-radius: 4px;
+      box-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+      /* Tạo hiệu ứng phím vật lý */
+      text-transform: uppercase;
+      font-family: var(--base-font-family);
+    }
   </style>
 
 </head>
@@ -273,7 +356,7 @@
       // -----------------------------------------------------------------
       name: 'Auto UI Generator',
       // repo           : 'https://github.com/hibbitts-design/docsify-open-publishing-starter-kit/',
-      homepage: 'home.md',
+      homepage: 'introduction.md',
       // coverpage      : '_coverpage.md',
       loadSidebar: !(getURLParameterByName(['standalone', 'embedded']) || standalone || false),
 
@@ -296,7 +379,7 @@
       search: {
         maxAge: 86400000, // Expiration time, the default one day
         paths: 'auto',
-        placeholder: 'Type to search',
+        placeholder: 'Search Ctrl+K',
         noData: 'No matches found.',
         // Headline depth, 1 - 6
         depth: 3,

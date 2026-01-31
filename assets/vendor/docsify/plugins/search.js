@@ -169,7 +169,7 @@
           slug = router.toURL(path, { id: slugify(config.id) });
         } else {
           // Sanitize title for ID only if using title for the slug
-          slug = router.toURL(path, { 
+          slug = router.toURL(path, {
             id: slugify(title)
               .replace(/\//g, '') // Remove slashes
               .replace(/\?/g, '') // Remove question marks
@@ -178,7 +178,7 @@
               .replace(/['"]/g, '') // Remove straight quotes
               .replace(/[\u2018\u2019\u201C\u201D]/g, '') // Remove curved quotes
               .replace(/^-/, '_') // Remove leading hyphen with underscore
-              .toLowerCase() 
+              .toLowerCase()
           });
         }
 
@@ -408,8 +408,8 @@
             content: (
               // Convert both postPageTitle and handlePostTitle to lowercase for case-insensitive comparison
               postPageTitle &&
-              postPageTitle.toLowerCase() !== handlePostTitle.toLowerCase() &&
-              postPageTitle.toLowerCase() !== 'readme' // Exclude 'ReadMe' from being prepended
+                postPageTitle.toLowerCase() !== handlePostTitle.toLowerCase() &&
+                postPageTitle.toLowerCase() !== 'readme' // Exclude 'ReadMe' from being prepended
                 ? `<strong>${postPageTitle}</strong><br>`
                 : ''
             ) + (postContent ? resultStr : ''),
@@ -429,7 +429,7 @@
         uniquePageTitles.add(contentMatch[1]);
       }
     });
-    
+
     // If all results share the same postPageTitle, remove it from display
     if (uniquePageTitles.size === 1) {
       const sharedPageTitle = [...uniquePageTitles][0]; // Extract the single title
@@ -652,7 +652,6 @@
           <path stroke="white" stroke-width="2"d="M8.25,15.75,15.75,8.25" />
         </svg>
       </div>
-      <kbd title="Press / to search">/</kbd>
     </div>
     <div class="results-status" aria-live="polite"></div>
     <div class="results-panel"></div>

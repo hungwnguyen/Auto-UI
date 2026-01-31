@@ -1,16 +1,10 @@
-* **Getting Started**
-  * [Introduction](introduction.md)
-  * [Quick Start Guide](getting-started.md)
-  * [Requirements](introduction.md#requirements)
+* * [Introduction](introduction.md)
 
-* **Workflow**
-  * [Main Workflow](workflow.md)
-  * [Preparing Screenshots](workflow.md#prepare)
-  * [Sprite Matching](sprite-matching.md)
+* * [Getting Started](getting-started.md)
 
-* **Technical Details**
-  * [Detection System](detection-system.md)
-  * [Layout & Anchor Logic](layout-logic.md)
+* * [Supported Features](features.md)
+
+* * [FAQ](faq.md)
 
 ---
 <div style="margin-top: 20px; padding: 0 15px; display: flex; flex-direction: column; gap: 10px; align-items: center;">

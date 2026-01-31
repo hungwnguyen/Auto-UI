@@ -1,88 +1,45 @@
 # Auto UI Generator for Unity
-> **Turn Screenshots into Production-Ready UI — Automatically**
+> **From Screenshot to Production-Ready UI — Instantly**
 
-![Auto UI Generator Logo](images/auuilogo.png ":no-zoom")
+![Auto UI Generator Logo](images/auuilogo.png)
 
-**Auto UI Generator** is a powerful Unity Editor Tool that allows you to transform UI designs from screenshots (Figma, Photoshop, or mockups) into fully functional Unity UI systems with just a few clicks.
-
-* ❌ **No more** manual placement of Images, Buttons, or Text.
-* ❌ **No more** tedious manual anchor adjustments.
-* ✅ **The tool handles everything for you.**
+**Auto UI Generator** transforms your UI designs (Figma, Photoshop, or mockups) into fully functional Unity UI systems. Stop wasting hours on manual positioning and anchor adjustments.
 
 ---
 
-## 🚀 Key Features
+## ✨ Why Auto UI Generator?
 
-### 🖼 UI from Screenshot
-* Detect layouts directly from UI images.
-* Supports mockups from Figma, Photoshop, and standard PNG/JPG files.
-
-### 🧠 Smart Element Detection
-* **Image**: Identifies shapes and visual components.
-* **Text (OCR)**: Automatically extracts text content and font properties.
-* **Button**: Recognizes interactive areas and states.
-* **Z-order**: Maintains correct layer depth and sorting.
-
-### 📐 Automatic Layout & Anchors
-* Full-screen UI automatically adapts with Stretch settings.
-* Intelligent anchoring based on screen regions (Top / Center / Bottom).
-* Fully compatible with all screen resolutions.
-
-### 🎨 Template-Based Sprite Matching
-* Drag & drop folders or sample assets.
-* Automatically matches sprites based on file names or visual similarity.
-* Preserves the integrity of the original design.
-
-### 🛠 Unity Editor Integration
-* Intuitive UI integrated directly into the Unity Editor.
-* **Zero-code**: No programming required to generate the UI.
-* Apply UI changes directly onto your active Canvas.
+* **Smart Detection**: Automatically identifies Images, Buttons, and extracts Text via OCR.
+* **Adaptive Layout**: Intelligent anchoring and Z-order management for all screen resolutions.
+* **Template Matching**: Automatically maps your project sprites to the design based on visual similarity.
+* **Zero-Code**: A powerful Editor Tool that requires no programming to set up complex layouts.
 
 ---
 
-## 🧩 Workflow Overview
+## 🛠 3-Step Workflow
 
-1.  **Prepare**: Capture a screenshot of your UI design.
-2.  **Configure**: Drag & drop your Template Assets (sprites).
-3.  **Setup**: Select your Target Root (Canvas or RectTransform).
-4.  **Execute**: Click **Apply UI**.
-5.  **Result**: ✨ Your Unity UI is generated automatically and ready for production.
+1.  **Input**: Drag & drop your UI screenshot into the tool.
+2.  **Configure**: Select your template folder and target Canvas.
+3.  **Generate**: Click **Apply UI** to build your interface instantly.
 
----
 
-## 🎯 Who Is This For?
-
-* 🎮 **Game Developers**: Focus on gameplay logic instead of UI positioning.
-* 🎨 **UI/UX Designers**: Quickly prototype and test designs directly in-engine.
-* 🧑‍💻 **Unity Developers**: Speed up production for high-volume UI projects.
-* 🚀 **Teams**: Streamline the UI development pipeline and reduce human error.
 
 ---
 
-## 📦 Package Includes
+## 📦 Key Components
 
-| Component | Description |
+| Feature | Description |
 | :--- | :--- |
-| **Auto UI Generator** | The core Editor Tool interface |
-| **Smart Layout System** | Automatic Anchor & Alignment engine |
-| **OCR Text Detection** | Integrated text recognition technology |
-| **Sprite Template Resolver** | Intelligent asset matching logic |
-| **Screenshot Tool** | In-Editor utility for capturing UI references |
+| **Smart Layout Engine** | Handles automatic Anchors, Alignment, and Stretching. |
+| **OCR Text System** | Recognizes and populates text content and font properties. |
+| **Sprite Resolver** | Intelligent asset matching to maintain design integrity. |
 
 ---
 
-## 📚 Documentation Pages
+## 📚 Documentation
 
-* [Introduction](introduction)
-* [Getting Started](getting-started)
-* [Auto UI Generator Workflow](workflow)
-* **Advanced Topics:**
-    * [Detection System Overview](detection-system)
-    * [Layout & Anchor Logic](layout-logic)
-    * [Templates & Sprite Matching](sprite-matching)
+* [**Getting Started**](getting-started) - Installation and your first UI generation.
+* [**Workflow Guide**](workflow) - Best practices for preparing screenshots.
+* [**Technical Details**](detection-system) - Deep dive into layout logic and OCR.
 
----
-
-> [!TIP]
-> **Why Auto UI Generator?**
-> Design once. Generate forever. Save hours of manual UI setup and focus your energy on what matters most: **gameplay and polish.**
+> **Design once. Generate forever.** Focus on gameplay and polish while we handle the pixels.
