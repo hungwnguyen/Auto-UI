@@ -1,10 +1,9 @@
 # What is Auto UI Generator?
 
 > The **Auto UI Generator** is a Unity extension which enables you to transform your UI designs into fully functional production-ready layouts quickly and in-house.
+
 <center>
-
-<iframe width="100%" height="450" src="//www.youtube.com/embed/6stlCkUDG_s?si=gRfKQXVDOrreWA3B" title="Auto UI Generator Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
+  <iframe width="100%" height="450" src="https://www.youtube.com/embed/_fz7_ZdU9Qc?si=x1BkEXB6lvXz8V6v" title="Auto UI Generator Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </center>
 
 With Auto UI Generator, you can create a seamless bridge between design mockups (Figma, Photoshop, etc.) and the **Unity Editor**. Your screenshots are analyzed and converted into standard **Unity UGUI** components automatically, saving you hours of manual positioning and anchor adjustments.
@@ -15,9 +14,19 @@ With Auto UI Generator, you can create a seamless bridge between design mockups 
 * **Template Matching:** Find the perfect fit by automatically mapping your project's existing sprites to the design based on visual similarity.
 * **Zero-Code Workflow:** A powerful Editor Tool designed for designers and developers alike, requiring no programming to set up complex layouts.
 
-With Auto UI Generator, you can run your UI generation **directly in the Editor** so that you can design, iterate, and test your interface in a variety of ways without leaving your project.
+---
+
+### ⚠️ Technical Limitations
+To ensure the highest accuracy during the generation process, please note the following constraints regarding your design assets:
+
+* **Alpha Transparency:** The tool does not currently support sub-images with low **Alpha** values or high transparency. Ensure your elements are clearly visible.
+* **Transformations:** Sub-images must match the original source assets. The generator **does not support** elements that have been **scaled** or **rotated** relative to their original sprite dimensions.
+* **Visual Consistency:** For best results, ensure your design mockups use high-resolution screenshots to assist the OCR and Template Matching engines.
 
 ---
+
+### Workflow Integration
+With Auto UI Generator, you can run your UI generation **directly in the Editor** so that you can design, iterate, and test your interface in a variety of ways without leaving your project.
 
 ### Get Started
 To begin, let's generate your first UI! For a comprehensive understanding of each stage, please refer to our **step-by-step guide**. If you're looking to get up and running quickly, we also have a **quickstart guide** available.
